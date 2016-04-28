@@ -1,0 +1,8 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'force-touch-glitches' do
+    pod 'GlitchLabel', '1.0.2'
+    pod ‘DFContinuousForceTouchGestureRecognizer’, '0.1.0’
+end
+

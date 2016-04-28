@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7E90BEA1CD1925A008D77A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */; };
+		A7E90BEC1CD1925A008D77A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E90BEB1CD1925A008D77A8 /* ViewController.swift */; };
+		A7E90BEF1CD1925A008D77A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E90BED1CD1925A008D77A8 /* Main.storyboard */; };
+		A7E90BF11CD1925A008D77A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E90BF01CD1925A008D77A8 /* Assets.xcassets */; };
+		A7E90BF41CD1925A008D77A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E90BF21CD1925A008D77A8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "force-touch-glitches.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7E90BEB1CD1925A008D77A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7E90BEE1CD1925A008D77A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7E90BF01CD1925A008D77A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7E90BF31CD1925A008D77A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7E90BF51CD1925A008D77A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7E90BE31CD1925A008D77A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7E90BDD1CD1925A008D77A8 = {
+			isa = PBXGroup;
+			children = (
+				A7E90BE81CD1925A008D77A8 /* force-touch-glitches */,
+				A7E90BE71CD1925A008D77A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7E90BE71CD1925A008D77A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7E90BE81CD1925A008D77A8 /* force-touch-glitches */ = {
+			isa = PBXGroup;
+			children = (
+				A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */,
+				A7E90BEB1CD1925A008D77A8 /* ViewController.swift */,
+				A7E90BED1CD1925A008D77A8 /* Main.storyboard */,
+				A7E90BF01CD1925A008D77A8 /* Assets.xcassets */,
+				A7E90BF21CD1925A008D77A8 /* LaunchScreen.storyboard */,
+				A7E90BF51CD1925A008D77A8 /* Info.plist */,
+			);
+			path = "force-touch-glitches";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7E90BE51CD1925A008D77A8 /* force-touch-glitches */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E90BF81CD1925A008D77A8 /* Build configuration list for PBXNativeTarget "force-touch-glitches" */;
+			buildPhases = (
+				A7E90BE21CD1925A008D77A8 /* Sources */,
+				A7E90BE31CD1925A008D77A8 /* Frameworks */,
+				A7E90BE41CD1925A008D77A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "force-touch-glitches";
+			productName = "force-touch-glitches";
+			productReference = A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7E90BDE1CD1925A008D77A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = gemmakbarlow;
+				TargetAttributes = {
+					A7E90BE51CD1925A008D77A8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = A7E90BE11CD1925A008D77A8 /* Build configuration list for PBXProject "force-touch-glitches" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7E90BDD1CD1925A008D77A8;
+			productRefGroup = A7E90BE71CD1925A008D77A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7E90BE51CD1925A008D77A8 /* force-touch-glitches */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7E90BE41CD1925A008D77A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E90BF41CD1925A008D77A8 /* LaunchScreen.storyboard in Resources */,
+				A7E90BF11CD1925A008D77A8 /* Assets.xcassets in Resources */,
+				A7E90BEF1CD1925A008D77A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7E90BE21CD1925A008D77A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7E90BEC1CD1925A008D77A8 /* ViewController.swift in Sources */,
+				A7E90BEA1CD1925A008D77A8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7E90BED1CD1925A008D77A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E90BEE1CD1925A008D77A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7E90BF21CD1925A008D77A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7E90BF31CD1925A008D77A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7E90BF61CD1925A008D77A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7E90BF71CD1925A008D77A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7E90BF91CD1925A008D77A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7E90BFA1CD1925A008D77A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7E90BE11CD1925A008D77A8 /* Build configuration list for PBXProject "force-touch-glitches" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E90BF61CD1925A008D77A8 /* Debug */,
+				A7E90BF71CD1925A008D77A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7E90BF81CD1925A008D77A8 /* Build configuration list for PBXNativeTarget "force-touch-glitches" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E90BF91CD1925A008D77A8 /* Debug */,
+				A7E90BFA1CD1925A008D77A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7E90BDE1CD1925A008D77A8 /* Project object */;
+}

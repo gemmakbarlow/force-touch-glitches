@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import GlitchLabel
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var glitchingLabel: GlitchLabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

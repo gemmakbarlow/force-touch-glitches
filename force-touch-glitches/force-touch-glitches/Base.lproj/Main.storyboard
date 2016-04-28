@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="use the force, Luke" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFZ-qw-N4A">
+                                <rect key="frame" x="30" y="547.5" width="540" height="22.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5e-d9-8EA" customClass="GlitchLabel" customModule="GlitchLabel">
-                                <rect key="frame" x="200.5" y="266" width="200" height="68"/>
+                                <rect key="frame" x="200" y="266" width="200" height="68"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -35,12 +41,17 @@
                         <constraints>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25s-16-PlL"/>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6H6-Ha-3Dn"/>
+                            <constraint firstItem="MFZ-qw-N4A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="JYw-XF-ppa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MFZ-qw-N4A" secondAttribute="trailing" constant="10" id="WK9-ka-LRR"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="O5e-d9-8EA" secondAttribute="trailing" constant="20" id="Xp6-R8-3K5"/>
+                            <constraint firstItem="MFZ-qw-N4A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwd-3V-h1y"/>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="wct-Im-CAP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MFZ-qw-N4A" secondAttribute="bottom" constant="30" id="xWv-6o-iah"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="glitchingLabel" destination="O5e-d9-8EA" id="ant-Ao-hbB"/>
+                        <outlet property="hintLabel" destination="MFZ-qw-N4A" id="bug-GU-MWQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

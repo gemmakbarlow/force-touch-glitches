@@ -80,6 +80,7 @@
                         <outlet property="glitchingLabel" destination="O5e-d9-8EA" id="ant-Ao-hbB"/>
                         <outlet property="hintLabel" destination="MFZ-qw-N4A" id="bug-GU-MWQ"/>
                         <outlet property="target" destination="fBr-jI-Cul" id="aMD-V0-M0f"/>
+                        <outlet property="thumb" destination="xuo-0i-erd" id="SYG-zx-P8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

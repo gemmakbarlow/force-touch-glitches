@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupForceTouchGestureRecognizer()
         glitchingLabel.glitchEnabled = false
+        
     }
     
     override func viewWillAppear(animated: Bool) {

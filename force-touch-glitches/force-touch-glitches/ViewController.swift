@@ -72,16 +72,27 @@ func vibrate() {
 
 extension ViewController: DFContinuousForceTouchDelegate {
     
-    
     func forceTouchRecognized(recognizer: DFContinuousForceTouchGestureRecognizer) {
-        vibrate()
-        glitchingLabel.glitchEnabled = true
-        
+        beginGlitching()
+    }
+
+    func forceTouchRecognizer(recognizer: DFContinuousForceTouchGestureRecognizer!, didCancelWithForce force: CGFloat, maxForce: CGFloat) {
+        endGlitching()
     }
 
     func forceTouchRecognizer(recognizer: DFContinuousForceTouchGestureRecognizer!, didEndWithForce force: CGFloat, maxForce: CGFloat) {
-        glitchingLabel.glitchEnabled = false
+        endGlitching()
     }
     
+    
+    private func beginGlitching() {
+        vibrate()
+        glitchingLabel.glitchEnabled = true
+
+    }
+    
+    private func endGlitching() {
+        glitchingLabel.glitchEnabled = false
+    }
 }
 

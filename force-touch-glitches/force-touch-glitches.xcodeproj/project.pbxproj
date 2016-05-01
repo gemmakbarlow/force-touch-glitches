@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		10BF7F8E9FAA1A914A26722E /* Pods-force-touch-glitches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-force-touch-glitches.release.xcconfig"; path = "Pods/Target Support Files/Pods-force-touch-glitches/Pods-force-touch-glitches.release.xcconfig"; sourceTree = "<group>"; };
 		A7BD91A81CD192D20061852D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "force-touch-glitches.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E90BE61CD1925A008D77A8 /* WWDC '16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC '16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E90BEB1CD1925A008D77A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7E90BEE1CD1925A008D77A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		A7E90BE71CD1925A008D77A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */,
+				A7E90BE61CD1925A008D77A8 /* WWDC '16.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,7 +119,7 @@
 			);
 			name = "force-touch-glitches";
 			productName = "force-touch-glitches";
-			productReference = A7E90BE61CD1925A008D77A8 /* force-touch-glitches.app */;
+			productReference = A7E90BE61CD1925A008D77A8 /* WWDC '16.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,7 +340,7 @@
 				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WWDC '16";
 			};
 			name = Debug;
 		};
@@ -352,7 +352,7 @@
 				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WWDC '16";
 			};
 			name = Release;
 		};

@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupForceTouchGestureRecognizer()
         glitchingLabel.glitchEnabled = false
+        setupSeeYouThereImage()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -127,6 +128,11 @@ class ViewController: UIViewController {
         target.addGestureRecognizer(forceTouch)
     }
 
+    
+    private func setupSeeYouThereImage() {
+        seeYouThere.layer.masksToBounds = true
+        seeYouThere.layer.cornerRadius = 10.0
+    }
 }
 
 

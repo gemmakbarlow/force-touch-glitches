@@ -11,6 +11,10 @@ import GlitchLabel
 import DFContinuousForceTouchGestureRecognizer
 import AudioToolbox.AudioServices
 
+enum Alpha: CGFloat {
+    case Show = 1.0
+    case Hide = 0.0
+}
 
 private let Luke = NSLocalizedString("Luke", comment: "Name to choose between, introductory text.")
 private let Leia = NSLocalizedString("Leia", comment: "Name to choose between, introductory text.")
@@ -44,8 +48,10 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        hintLabel.alpha = 0.0
-        thumb.alpha = 0.0
+        
+        let hide = Alpha.Hide.rawValue
+        hintLabel.alpha = hide
+        thumb.alpha = hide
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -107,7 +113,9 @@ class ViewController: UIViewController {
     // MARK: - Animation
     
     private func animateInOut(viewToAnimate: UIView, animateIn: Bool, completion: ((Bool) -> Void)?) {
-        UIView.animateWithDuration(AnimationDuration, delay: 2.0, options: .BeginFromCurrentState, animations: {            viewToAnimate.alpha = animateIn ? 1.0 : 0.0
+        UIView.animateWithDuration(AnimationDuration, delay: 2.0, options: .BeginFromCurrentState, animations: {
+            let alpha: Alpha = animateIn ? .Show : .Hide
+            viewToAnimate.alpha = alpha.rawValue
         }) { completed in
             completion?(completed)
         }
@@ -210,16 +218,18 @@ extension ViewController: DFContinuousForceTouchDelegate {
     }
     
     private func hideAllViews() {
-        glitchingLabel.alpha = 0.0
-        hintLabel.alpha = 0.0
-        thumb.alpha = 0.0
+        let hide = Alpha.Hide.rawValue
+        glitchingLabel.alpha = hide
+        hintLabel.alpha = hide
+        thumb.alpha = hide
         target.userInteractionEnabled = false
     }
     
     private func showSeeYouThereViews() {
-        seeYouThere.alpha = 1.0
+        let show = Alpha.Show.rawValue
+        seeYouThere.alpha = show
         hintLabel.text = SeeYouInJune
-        hintLabel.alpha = 1.0
+        hintLabel.alpha = show
     }
 }
 

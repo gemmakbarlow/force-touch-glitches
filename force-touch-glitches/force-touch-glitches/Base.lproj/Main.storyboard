@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="force_touch_glitches" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WWDC__16" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,6 +57,11 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="?"/>
+                                <connections>
+                                    <segue destination="DAa-CB-NDO" kind="popoverPresentation" popoverAnchorView="Ln9-R5-rO3" id="lhu-7h-Bf1">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitmoji-20160430202127" translatesAutoresizingMaskIntoConstraints="NO" id="MgQ-cE-doP">
                                 <rect key="frame" x="200" y="68" width="200" height="200"/>
@@ -103,9 +109,130 @@
             </objects>
             <point key="canvasLocation" x="240" y="352"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="84b-Cf-2W8">
+            <objects>
+                <viewController id="DAa-CB-NDO" customClass="InfoViewController" customModule="WWDC__16" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZE-hz-Zla"/>
+                        <viewControllerLayoutGuide type="bottom" id="Don-F6-jwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HBb-Gh-VpR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8X-cP-DtR">
+                                <rect key="frame" x="0.0" y="20" width="80" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="YBX-R8-WqX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="60"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="DAa-CB-NDO" eventType="touchUpInside" id="n6F-WS-sB8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitmoji-20160430201650" translatesAutoresizingMaskIntoConstraints="NO" id="W3c-Ap-YhU">
+                                <rect key="frame" x="101" y="114" width="398" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W3c-Ap-YhU" secondAttribute="height" multiplier="1:1" id="geD-9B-LTH"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ocU-Wn-413">
+                                <rect key="frame" x="20" y="533" width="560" height="57"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">http://gemmakbarlow.com, using Bitmoji (https://bitmoji.com), GlitchLabel and DTContinuousForceTouchRecognizer. 
+
+
+DFContinuousForceTouchGestureRecognizer
+
+Copyright (c) 2015 Daniel Fogg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+GlitchLabel
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Lee Sun-Hyoup
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="W3c-Ap-YhU" secondAttribute="trailing" constant="20" id="0su-Dz-Q0g"/>
+                            <constraint firstItem="ocU-Wn-413" firstAttribute="trailing" secondItem="W3c-Ap-YhU" secondAttribute="trailing" id="4rE-My-diB"/>
+                            <constraint firstItem="u8X-cP-DtR" firstAttribute="top" secondItem="vZE-hz-Zla" secondAttribute="bottom" id="Dvg-dM-Fec"/>
+                            <constraint firstItem="W3c-Ap-YhU" firstAttribute="top" secondItem="u8X-cP-DtR" secondAttribute="bottom" id="JXa-8z-6DH"/>
+                            <constraint firstItem="ocU-Wn-413" firstAttribute="leading" secondItem="W3c-Ap-YhU" secondAttribute="leading" id="Nmp-II-j2y"/>
+                            <constraint firstItem="ocU-Wn-413" firstAttribute="leading" secondItem="HBb-Gh-VpR" secondAttribute="leading" constant="20" id="OMh-g4-cya"/>
+                            <constraint firstItem="W3c-Ap-YhU" firstAttribute="top" secondItem="u8X-cP-DtR" secondAttribute="top" id="Rq9-Us-Hd5"/>
+                            <constraint firstItem="W3c-Ap-YhU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u8X-cP-DtR" secondAttribute="trailing" constant="20" id="bIn-B0-FWK"/>
+                            <constraint firstAttribute="bottom" secondItem="ocU-Wn-413" secondAttribute="bottom" constant="10" id="cXr-Gg-8Fg"/>
+                            <constraint firstItem="W3c-Ap-YhU" firstAttribute="centerX" secondItem="HBb-Gh-VpR" secondAttribute="centerX" id="fbe-AI-9L8"/>
+                            <constraint firstItem="W3c-Ap-YhU" firstAttribute="centerY" secondItem="HBb-Gh-VpR" secondAttribute="centerY" id="hb9-gm-86X"/>
+                            <constraint firstItem="u8X-cP-DtR" firstAttribute="leading" secondItem="HBb-Gh-VpR" secondAttribute="leading" id="iv6-07-OUR"/>
+                            <constraint firstItem="ocU-Wn-413" firstAttribute="top" secondItem="W3c-Ap-YhU" secondAttribute="bottom" constant="21" id="m10-qG-1wh"/>
+                            <constraint firstAttribute="trailing" secondItem="ocU-Wn-413" secondAttribute="trailing" constant="20" id="t4N-PL-T00"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Rq9-Us-Hd5"/>
+                                <exclude reference="hb9-gm-86X"/>
+                                <exclude reference="4rE-My-diB"/>
+                                <exclude reference="Nmp-II-j2y"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ev-aq-JDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="352"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bitmoji-20160430201650" width="398" height="398"/>
         <image name="bitmoji-20160430202127" width="296" height="273"/>
-        <image name="thumbprint" width="400" height="400"/>
+        <image name="thumbprint" width="80" height="80"/>
     </resources>
 </document>

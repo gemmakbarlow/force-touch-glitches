@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A79B502F1CD63D9200D85303 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B502E1CD63D9200D85303 /* InfoViewController.swift */; };
 		A7BD91A91CD192D20061852D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A7BD91A81CD192D20061852D /* Podfile */; };
 		A7E90BEA1CD1925A008D77A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */; };
 		A7E90BEC1CD1925A008D77A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E90BEB1CD1925A008D77A8 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		10BF7F8E9FAA1A914A26722E /* Pods-force-touch-glitches.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-force-touch-glitches.release.xcconfig"; path = "Pods/Target Support Files/Pods-force-touch-glitches/Pods-force-touch-glitches.release.xcconfig"; sourceTree = "<group>"; };
+		A79B502E1CD63D9200D85303 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A7BD91A81CD192D20061852D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7E90BE61CD1925A008D77A8 /* WWDC '16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC '16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A79B50301CD63DB200D85303 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7E90BEB1CD1925A008D77A8 /* ViewController.swift */,
+				A79B502E1CD63D9200D85303 /* InfoViewController.swift */,
+			);
+			name = Controllers;
+			path = "force-touch-glitches";
+			sourceTree = "<group>";
+		};
+		A79B50311CD63DBE00D85303 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7E90BED1CD1925A008D77A8 /* Main.storyboard */,
+				A7E90BF01CD1925A008D77A8 /* Assets.xcassets */,
+				A7E90BF21CD1925A008D77A8 /* LaunchScreen.storyboard */,
+				A7E90BF51CD1925A008D77A8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "force-touch-glitches";
+			sourceTree = "<group>";
+		};
 		A7BD91A71CD192C70061852D /* Podfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +87,9 @@
 			children = (
 				A7BD91A71CD192C70061852D /* Podfile */,
 				A7E90BE81CD1925A008D77A8 /* force-touch-glitches */,
+				A79B50301CD63DB200D85303 /* Controllers */,
 				A7E90BE71CD1925A008D77A8 /* Products */,
+				A79B50311CD63DBE00D85303 /* Supporting Files */,
 				E1EB08F02B83C19CC0D45526 /* Pods */,
 				05060112938E14D0EA191B85 /* Frameworks */,
 			);
@@ -81,11 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				A7E90BE91CD1925A008D77A8 /* AppDelegate.swift */,
-				A7E90BEB1CD1925A008D77A8 /* ViewController.swift */,
-				A7E90BED1CD1925A008D77A8 /* Main.storyboard */,
-				A7E90BF01CD1925A008D77A8 /* Assets.xcassets */,
-				A7E90BF21CD1925A008D77A8 /* LaunchScreen.storyboard */,
-				A7E90BF51CD1925A008D77A8 /* Info.plist */,
 			);
 			path = "force-touch-glitches";
 			sourceTree = "<group>";
@@ -223,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E90BEC1CD1925A008D77A8 /* ViewController.swift in Sources */,
+				A79B502F1CD63D9200D85303 /* InfoViewController.swift in Sources */,
 				A7E90BEA1CD1925A008D77A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

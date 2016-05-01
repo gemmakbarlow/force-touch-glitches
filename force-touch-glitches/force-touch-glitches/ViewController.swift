@@ -11,10 +11,17 @@ import GlitchLabel
 import DFContinuousForceTouchGestureRecognizer
 import AudioToolbox.AudioServices
 
-private let UseTheForce = NSLocalizedString("use the force (touch) Luke", comment: "First line of text to display")
+
+private let Luke = NSLocalizedString("Luke", comment: "Name to choose between, introductory text.")
+private let Leia = NSLocalizedString("Leia", comment: "Name to choose between, introductory text.")
+private let Chewy = NSLocalizedString("Chewy", comment: "Name to choose between, introductory text.")
+
+private let UseTheForceFormat = NSLocalizedString("use the force (touch) %@", comment: "First line of text to display")
 private let HoldDownForFiveSeconds = NSLocalizedString("hold for a while", comment: "Second line of text to display")
 private let AlmostThere = NSLocalizedString("almost there", comment: "Third line of text to display")
 private let Hypnotic = NSLocalizedString("hypnotic, isn't it?", comment: "Fourth line of text to display")
+
+private let SeeYouInJune = NSLocalizedString("See you in June?", comment: "Final display text")
 
 class ViewController: UIViewController {
 
@@ -33,8 +40,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupForceTouchGestureRecognizer()
         glitchingLabel.glitchEnabled = false
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,7 +54,12 @@ class ViewController: UIViewController {
         // GB - animate text in & out
         guard !forceTouchStarted else { return }
         
-        animateInOutWithText(UseTheForce)  { [weak self] completed in
+        // GB - pick a name to use
+        let names = [Luke, Leia, Chewy]
+        let randomIndex = Int.random(names.count - 1)
+        let text = String(format: UseTheForceFormat, names[randomIndex])
+        
+        animateInOutWithText(text)  { [weak self] completed in
             guard completed else { return }
             guard let t = self?.thumb else { return }
             self?.animateInOut(t, animateIn: true, completion: nil)
@@ -119,6 +129,15 @@ func vibrate() {
     AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 }
 
+// MARK: - Random Numbers
+
+extension Int {
+    
+    static func random(maximum: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(maximum)))
+    }
+    
+}
 
 // MARK: - Delays
 
@@ -199,7 +218,7 @@ extension ViewController: DFContinuousForceTouchDelegate {
     
     private func showSeeYouThereViews() {
         seeYouThere.alpha = 1.0
-        hintLabel.text = "See you there?"
+        hintLabel.text = SeeYouInJune
         hintLabel.alpha = 1.0
     }
 }

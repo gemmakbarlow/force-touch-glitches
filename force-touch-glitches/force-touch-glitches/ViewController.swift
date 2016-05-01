@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var target: UIView!
     @IBOutlet weak var thumb: UIImageView!
+    @IBOutlet weak var seeYouThere: UIImageView!
     
     // MARK: - View Lifecycle
     
@@ -33,11 +34,13 @@ class ViewController: UIViewController {
         setupForceTouchGestureRecognizer()
         glitchingLabel.glitchEnabled = false
         
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         hintLabel.alpha = 0.0
+        thumb.alpha = 0.0
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,7 +49,11 @@ class ViewController: UIViewController {
         // GB - animate text in & out
         guard !forceTouchStarted else { return }
         
-        animateInOutWithText(UseTheForce, completion: nil)
+        animateInOutWithText(UseTheForce)  { [weak self] completed in
+            guard completed else { return }
+            guard let t = self?.thumb else { return }
+            self?.animateInOut(t, animateIn: true, completion: nil)
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -71,7 +78,7 @@ class ViewController: UIViewController {
 
     
     private func endForceTouchMessaging() {
-        animateInOut(false) { [weak self] completed in
+        animateInOut(hintLabel, animateIn: false) { [weak self] completed in
             guard completed else { return }
             self?.hintLabel.text = ""
         }
@@ -79,18 +86,18 @@ class ViewController: UIViewController {
     
     private func animateInOutWithText(text: String, completion: ((Bool) -> Void)?) {
         hintLabel.text = text
-        animateInOut(true) { [weak self] completed in
+        animateInOut(hintLabel, animateIn: true) { [weak self] completed in
             if completed {
-                self?.animateInOut(false, completion: completion)
+                guard let l = self?.hintLabel else { return }
+                self?.animateInOut(l, animateIn: false, completion: completion)
             }
         }
     }
     
     // MARK: - Animation
     
-    private func animateInOut(animateIn: Bool, completion: ((Bool) -> Void)?) {
-        UIView.animateWithDuration(AnimationDuration, delay: 2.0, options: .BeginFromCurrentState, animations: { [weak self] in
-            self?.hintLabel.alpha = animateIn ? 1.0 : 0.0
+    private func animateInOut(viewToAnimate: UIView, animateIn: Bool, completion: ((Bool) -> Void)?) {
+        UIView.animateWithDuration(AnimationDuration, delay: 2.0, options: .BeginFromCurrentState, animations: {            viewToAnimate.alpha = animateIn ? 1.0 : 0.0
         }) { completed in
             completion?(completed)
         }
@@ -162,6 +169,7 @@ extension ViewController: DFContinuousForceTouchDelegate {
             }
             delay(3.0) {
                 self?.hideAllViews()
+                self?.showSeeYouThereViews()
             }
         }
     }
@@ -187,6 +195,12 @@ extension ViewController: DFContinuousForceTouchDelegate {
         hintLabel.alpha = 0.0
         thumb.alpha = 0.0
         target.userInteractionEnabled = false
+    }
+    
+    private func showSeeYouThereViews() {
+        seeYouThere.alpha = 1.0
+        hintLabel.text = "See you there?"
+        hintLabel.alpha = 1.0
     }
 }
 

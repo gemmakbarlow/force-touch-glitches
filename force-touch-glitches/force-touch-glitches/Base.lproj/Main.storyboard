@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="use the force (touch), Luke" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFZ-qw-N4A">
-                                <rect key="frame" x="30" y="249" width="540" height="28"/>
+                                <rect key="frame" x="30" y="276" width="540" height="28"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WWDC" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O5e-d9-8EA" customClass="GlitchLabel" customModule="GlitchLabel">
-                                <rect key="frame" x="221" y="159" width="157" height="82"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="60"/>
+                                <rect key="frame" x="169" y="131" width="260.5" height="137"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="100"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -57,11 +57,19 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="?"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitmoji-20160430202127" translatesAutoresizingMaskIntoConstraints="NO" id="MgQ-cE-doP">
+                                <rect key="frame" x="200" y="68" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LoS-Gj-Su7"/>
+                                    <constraint firstAttribute="width" constant="200" id="nzu-zp-AyM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ln9-R5-rO3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="09t-fT-mht"/>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25s-16-PlL"/>
+                            <constraint firstItem="MgQ-cE-doP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3rw-EA-GyN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fBr-jI-Cul" secondAttribute="bottom" constant="20" id="4sy-nU-NCs"/>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="6H6-Ha-3Dn"/>
                             <constraint firstItem="xuo-0i-erd" firstAttribute="bottom" secondItem="fBr-jI-Cul" secondAttribute="bottom" id="6Zx-7a-Qp6"/>
@@ -71,14 +79,22 @@
                             <constraint firstItem="fBr-jI-Cul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VSh-Di-9at"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MFZ-qw-N4A" secondAttribute="trailing" constant="10" id="WK9-ka-LRR"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="O5e-d9-8EA" secondAttribute="trailing" constant="20" id="Xp6-R8-3K5"/>
+                            <constraint firstItem="MgQ-cE-doP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZAw-eC-1W3"/>
                             <constraint firstItem="MFZ-qw-N4A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwd-3V-h1y"/>
+                            <constraint firstItem="MFZ-qw-N4A" firstAttribute="top" secondItem="MgQ-cE-doP" secondAttribute="bottom" constant="8" id="e81-Pd-gDd"/>
                             <constraint firstItem="MFZ-qw-N4A" firstAttribute="top" secondItem="O5e-d9-8EA" secondAttribute="bottom" constant="8" id="tTm-I1-3zr"/>
                             <constraint firstItem="O5e-d9-8EA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="wct-Im-CAP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZAw-eC-1W3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="glitchingLabel" destination="O5e-d9-8EA" id="ant-Ao-hbB"/>
                         <outlet property="hintLabel" destination="MFZ-qw-N4A" id="bug-GU-MWQ"/>
+                        <outlet property="seeYouThere" destination="MgQ-cE-doP" id="KPR-8s-1zs"/>
                         <outlet property="target" destination="fBr-jI-Cul" id="aMD-V0-M0f"/>
                         <outlet property="thumb" destination="xuo-0i-erd" id="SYG-zx-P8Z"/>
                     </connections>
@@ -89,6 +105,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bitmoji-20160430202127" width="296" height="273"/>
         <image name="thumbprint" width="400" height="400"/>
     </resources>
 </document>

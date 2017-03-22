@@ -10,7 +10,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
-    @IBAction func closeButtonTapped(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

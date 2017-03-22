@@ -12,8 +12,8 @@ import DFContinuousForceTouchGestureRecognizer
 import AudioToolbox.AudioServices
 
 enum Alpha: CGFloat {
-    case Show = 1.0
-    case Hide = 0.0
+    case show = 1.0
+    case hide = 0.0
 }
 
 private let Luke = NSLocalizedString("Luke", comment: "Name to choose between, introductory text.")
@@ -29,7 +29,7 @@ private let SeeYouInJune = NSLocalizedString("See you in June?", comment: "Final
 
 class ViewController: UIViewController {
 
-    private let AnimationDuration = 1.0
+    fileprivate let AnimationDuration = 1.0
     var forceTouchStarted = false
     
     @IBOutlet weak var glitchingLabel: GlitchLabel!
@@ -47,15 +47,15 @@ class ViewController: UIViewController {
         setupSeeYouThereImage()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let hide = Alpha.Hide.rawValue
+        let hide = Alpha.hide.rawValue
         hintLabel.alpha = hide
         thumb.alpha = hide
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // GB - animate text in & out
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         forceTouchStarted = false
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    private func beginForceTouchMessaging(finale: ((Bool) -> Void)?) {
+    fileprivate func beginForceTouchMessaging(_ finale: ((Bool) -> Void)?) {
         animateInOutWithText(HoldDownForFiveSeconds) { [weak self] completed in
             guard completed else { return }
             self?.animateInOutWithText(AlmostThere) { [weak self] completed in
@@ -94,14 +94,14 @@ class ViewController: UIViewController {
     }
 
     
-    private func endForceTouchMessaging() {
+    fileprivate func endForceTouchMessaging() {
         animateInOut(hintLabel, animateIn: false) { [weak self] completed in
             guard completed else { return }
             self?.hintLabel.text = ""
         }
     }
     
-    private func animateInOutWithText(text: String, completion: ((Bool) -> Void)?) {
+    fileprivate func animateInOutWithText(_ text: String, completion: ((Bool) -> Void)?) {
         hintLabel.text = text
         animateInOut(hintLabel, animateIn: true) { [weak self] completed in
             if completed {
@@ -113,23 +113,23 @@ class ViewController: UIViewController {
     
     // MARK: - Animation
     
-    private func animateInOut(viewToAnimate: UIView, animateIn: Bool, completion: ((Bool) -> Void)?) {
-        UIView.animateWithDuration(AnimationDuration, delay: 2.0, options: .BeginFromCurrentState, animations: {
-            let alpha: Alpha = animateIn ? .Show : .Hide
+    fileprivate func animateInOut(_ viewToAnimate: UIView, animateIn: Bool, completion: ((Bool) -> Void)?) {
+        UIView.animate(withDuration: AnimationDuration, delay: 2.0, options: .beginFromCurrentState, animations: {
+            let alpha: Alpha = animateIn ? .show : .hide
             viewToAnimate.alpha = alpha.rawValue
         }) { completed in
             completion?(completed)
         }
     }
 
-    private func setupForceTouchGestureRecognizer() {
+    fileprivate func setupForceTouchGestureRecognizer() {
         let forceTouch = DFContinuousForceTouchGestureRecognizer()
         forceTouch.forceTouchDelegate = self
         target.addGestureRecognizer(forceTouch)
     }
 
     
-    private func setupSeeYouThereImage() {
+    fileprivate func setupSeeYouThereImage() {
         seeYouThere.layer.masksToBounds = true
         seeYouThere.layer.cornerRadius = 10.0
     }
@@ -147,7 +147,7 @@ func vibrate() {
 
 extension Int {
     
-    static func random(maximum: Int) -> Int {
+    static func random(_ maximum: Int) -> Int {
         return Int(arc4random_uniform(UInt32(maximum)))
     }
     
@@ -161,32 +161,28 @@ extension Int {
  - parameter delay:   Double describing how many seconds the action should be delayed for.
  - parameter closure: Action code to launch post-delay
  */
-func delay(delay: Double, closure: ()->()) {
-    dispatch_after(
-        dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(delay * Double(NSEC_PER_SEC)
-            )
-        ),
-        dispatch_get_main_queue(), closure)
+func delay(_ delay: Double, closure: @escaping ()->()) {
+    DispatchQueue.main.asyncAfter(
+        deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC)
+            )) / Double(NSEC_PER_SEC), execute: closure)
 }
 
 extension ViewController: DFContinuousForceTouchDelegate {
   
-    func forceTouchRecognized(recognizer: DFContinuousForceTouchGestureRecognizer) {
+    func forceTouchRecognized(_ recognizer: DFContinuousForceTouchGestureRecognizer) {
         handleForceTouchStart()
     }
 
-    func forceTouchRecognizer(recognizer: DFContinuousForceTouchGestureRecognizer!, didCancelWithForce force: CGFloat, maxForce: CGFloat) {
+    func forceTouch(_ recognizer: DFContinuousForceTouchGestureRecognizer!, didCancelWithForce force: CGFloat, maxForce: CGFloat) {
         handleForceTouchEnd()
     }
 
-    func forceTouchRecognizer(recognizer: DFContinuousForceTouchGestureRecognizer!, didEndWithForce force: CGFloat, maxForce: CGFloat) {
+    func forceTouch(_ recognizer: DFContinuousForceTouchGestureRecognizer!, didEndWithForce force: CGFloat, maxForce: CGFloat) {
         handleForceTouchEnd()
     }
     
     
-    private func handleForceTouchStart() {
+    fileprivate func handleForceTouchStart() {
         forceTouchStarted = true
         beginGlitching()
         beginForceTouchMessaging { [weak self] finale in
@@ -207,32 +203,32 @@ extension ViewController: DFContinuousForceTouchDelegate {
         }
     }
     
-    private func handleForceTouchEnd() {
+    fileprivate func handleForceTouchEnd() {
         forceTouchStarted = false
         endForceTouchMessaging()
         endGlitching()
     }
     
-    private func beginGlitching() {
+    fileprivate func beginGlitching() {
         vibrate()
         glitchingLabel.glitchEnabled = true
 
     }
     
-    private func endGlitching() {
+    fileprivate func endGlitching() {
         glitchingLabel.glitchEnabled = false
     }
     
-    private func hideAllViews() {
-        let hide = Alpha.Hide.rawValue
+    fileprivate func hideAllViews() {
+        let hide = Alpha.hide.rawValue
         glitchingLabel.alpha = hide
         hintLabel.alpha = hide
         thumb.alpha = hide
-        target.userInteractionEnabled = false
+        target.isUserInteractionEnabled = false
     }
     
-    private func showSeeYouThereViews() {
-        let show = Alpha.Show.rawValue
+    fileprivate func showSeeYouThereViews() {
+        let show = Alpha.show.rawValue
         seeYouThere.alpha = show
         hintLabel.text = SeeYouInJune
         hintLabel.alpha = show

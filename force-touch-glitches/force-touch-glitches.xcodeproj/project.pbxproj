@@ -155,6 +155,7 @@
 				TargetAttributes = {
 					A7E90BE51CD1925A008D77A8 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 93DW7Y5G9U;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -365,6 +366,7 @@
 			baseConfigurationReference = E23F5F0D113EE18807020AA0 /* Pods-force-touch-glitches.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93DW7Y5G9U;
 				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
@@ -378,6 +380,7 @@
 			baseConfigurationReference = 10BF7F8E9FAA1A914A26722E /* Pods-force-touch-glitches.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93DW7Y5G9U;
 				INFOPLIST_FILE = "force-touch-glitches/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gemmakbarlow.force-touch-glitches";
